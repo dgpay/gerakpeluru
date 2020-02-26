@@ -1,6 +1,6 @@
 import math
 import matplotlib.pyplot as plt
-#Gerak Peluru Tanpa memikirkan Hambatan Udata(D)
+#Gerak Peluru Tanpa dan memikirkan Hambatan Udata(D)
 
 g=9.806
 ax=0
@@ -49,7 +49,7 @@ while(i<=T):
     numerik1x.append(round(x,2))
     numerik1y.append(round(y,2))
     i=i+0.01
-print(i)
+
 #ANALITIK PEMBVADING
 t=0.01
 x0=0
@@ -84,15 +84,11 @@ while(i<=T):
     numerik2x.append(round(x,2))
     numerik2y.append(round(y,2))
     i=i+0.01
-print(i)
 
 
-#print(numerik1x)
-#print(numerik1y)
-#print(numerik2x)
-#print(numerik2y)
+
 plt.plot(numerik1x,numerik1y,'r')
 plt.plot(numerik2x,numerik2y,'b')
 plt.plot(analitik1x,analitik1y,'y')
-#plt.plot(KDataNumerikx,KDataNumeriky,'b')
+
 plt.show()
