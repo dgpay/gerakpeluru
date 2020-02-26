@@ -1,6 +1,6 @@
 import math
 import matplotlib.pyplot as plt
-import numpy as np
+
 #Gerak Peluru Tanpa memikirkan Hambatan Udata(D)
 
 g=9.806
@@ -78,7 +78,7 @@ numerik2y.append(y)
 vxt=vx
 vyt=vy
 while (i<=T) :
-    v = math.sqrt((np.power(vx,2)+np.power(vy,2)))
+    v = math.sqrt((vx**2+vy**2))
     ax2 = -(D/m)*v*vx
     ay2 = -g-(D/m)*v*vy
     vy = vy + (ay2 * dt)
