@@ -78,7 +78,7 @@ y=0
 
 numerik2x.append(x)
 numerik2y.append(y)
-v = math.sqrt((np.power(vx,2)+np.power(vy,2)))
+v = math.sqrt((vx**2)+(vy**2))
 ax2 = -(D/m)*v*vx
 ay2 = -g-(D/m)*v*vy
 while (i<=T) :
@@ -105,7 +105,7 @@ analitik2x.append(x0)
 analitik2y.append(y0)
 
 while(t<=T):
-    v = math.sqrt((np.power(vx,2)+np.power(vy,2)))
+    v = math.sqrt((vx**2)+(vy**2))
     ax = -(D/m)*v*vx
     ay = -g-(D/m)*v*vy
     x=x0+(round(vx,2)*t)+(0.5*ax*(t**2)) #bisa rubah jadi x0*round(vx,2)*t
@@ -119,12 +119,7 @@ while(t<=T):
         t=t+dt
 print('total waktu analitik hambatan',t)
 
-#print(numerik1x)
-#print(numerik1y)
-#print(analitik1x)
-#print(analitik1y)
-#print(numerik2x)
-#print(numerik2y)
+
 plt.plot(numerik1x,numerik1y,'r')
 plt.plot(numerik2x,numerik2y,'b')
 plt.plot(analitik1x,analitik1y,'g')
